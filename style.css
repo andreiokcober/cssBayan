@@ -7,31 +7,47 @@ img {
     width: 100%;
     height: 100%;
 }
-.wrapper input {
+h1 {
+    margin-bottom: 1rem;
+}
+label {
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    background-color: aqua;
+    width: 100%;
+}
+input {
     opacity: 0;
 }
 .wrapper{
+    overflow: hidden;
+    width: 80%;
+    height: 100vh;
     margin: 0 auto;
     background-color: rgb(176, 182, 182);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.accardion{
-    width: 40%;
+.acardion{
+    width: 50%;
     padding: 35px 20px;
 }
-.accordion-item{
+.acardion-item{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
 }
-h1{
-    margin-bottom: 1rem;
+.acardion-content-img{
+    margin-top: 10px;
+    height: 0;
 }
-label{
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 10px;
-    background-color:aqua;
-    width: 100%;
+.acardion-item:hover>  .acardion-content .acardion-content-img{
+    height: 100%;
+    transition: all 0.5s;
 }
+.wrapper:hover .label-item{
+    background-color:#3b4e4e;
+}
+
