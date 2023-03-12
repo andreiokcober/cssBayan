@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.5s;
 }
 img {
     width: 100%;
@@ -23,7 +24,6 @@ input {
 .wrapper{
     overflow: hidden;
     width: 80%;
-    height: 100vh;
     margin: 0 auto;
     background-color: rgb(176, 182, 182);
     display: flex;
@@ -33,6 +33,8 @@ input {
 .acardion{
     width: 50%;
     padding: 35px 20px;
+    overflow: hidden;
+    height: 1000px;
 }
 .acardion-item{
     cursor: pointer;
@@ -42,12 +44,33 @@ input {
 .acardion-content-img{
     margin-top: 10px;
     height: 0;
+    transition: all 0.2s;
 }
-.acardion-item:hover>  .acardion-content .acardion-content-img{
+.acardion-item:hover>label>.acardion-content .acardion-content-img{
     height: 100%;
-    transition: all 0.5s;
+    transition-duration: 1s;
+}
+.acardion-item:hover>label>.acardion-item-text .plus{
+    transform: rotate(45deg);
 }
 .wrapper:hover .label-item{
     background-color:#3b4e4e;
+}
+#mem1:checked~.label-item .acardion-content .acardion-content-img,
+#mem2:checked~.label-item .acardion-content .acardion-content-img,
+#mem3:checked~.label-item .acardion-content .acardion-content-img,
+#mem4:checked~.label-item .acardion-content .acardion-content-img {
+   height: 100%;
+}
+.acardion-item-text{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    align-self: center;
+
+}
+.plus{
+    font-size: 1.5rem;
+    color:#000;
 }
 
