@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.5s;
 }
 img {
     width: 100%;
@@ -43,11 +42,12 @@ input {
 .acardion-content-img{
     margin-top: 1rem;
     height: 0;
-
+    opacity: 0;
 }
 .acardion-item:hover>label>.acardion-content .acardion-content-img{
+    transition: all 0.6s ease-in-out;
     height: 100%;
-    /* transition-duration: 1s; */
+    opacity: 1;
 }
 .acardion-item:hover>label>.acardion-item-text .plus{
     transform: rotate(45deg);
@@ -59,13 +59,16 @@ input {
 #mem2:checked~.label-item .acardion-content .acardion-content-img,
 #mem3:checked~.label-item .acardion-content .acardion-content-img,
 #mem4:checked~.label-item .acardion-content .acardion-content-img {
+   transition: all 0.6s ease-in-out;
    height: 100%;
+   opacity: 1;
 }
 #mem1:active~.label-item ,
 #mem2:active~.label-item ,
 #mem3:active~.label-item ,
 #mem4:active~.label-item {
     background-color:aqua;
+    /* transition-delay: color 0.1s; */
 }
 .acardion-item-text{
     display: flex;
@@ -77,6 +80,7 @@ input {
 .plus{
     font-size: 1.5rem;
     color:#000;
+    transition: all 0.6s;
 }
 @media screen and (max-width:800px){
     .acardion{
